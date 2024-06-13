@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVR Prasanth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("G0c_5oqMtW003xlzw");
+   })();
+</script>
+</head>
+
+<body>
+    <section id="landing-page" >
+        <nav>
+            <figure>
+                <img id="Personal-logo" src="./assests/Personal logo.jpg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">About</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()" >
+                    <a href="#" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black" >
+            
+                <i class="fas fa-adjust"></i>
+                </a>
+        
+                
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title red">I'm EVR Prasanth.</h1>
+                <p class="header__para">
+                    I'm a <b class="red">Frontend Software Engineer</b> with a Strong passion for building web
+                    applications with great user experiences.
+                    <br>
+                    Here's a bit more <b class="red click" onclick="toggleModal()">about me</b>.
+                </p>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/prasanth-evr-a4ab131b7/" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Prasanth1467" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="./assests/Prasanth 2023.pdf" target="_blank" class="social__link click">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+
+                </div>
+            </div>
+        </header>
+        <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+        </button>
+    </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div></a>
+    
+           <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">
+                    I'm a 20 year-old Indian <b class="red">frontend software engineer</b> with a strong passion for developing websites with
+                    great <b class="red">user experiences</b>.
+                    <br>
+                    I currently work on extremely difficult engineering problems and learn from a team consisting of some of the
+                    most <b class="red">talented</b> and <b class="red">experienced</b> software engineers everday.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assests/HTML5_logo_and_wordmark.svg.png" alt="">
+                    <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assests/CSS3_logo_and_wordmark.svg.png" alt="">
+                    <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assests/JavaScript-logo.png" alt="">
+                    <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="./assests/Python-logo-notext.svg.png" alt="">
+                    <span class="language__name">Python</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new opportunities.
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input  class="input" name="user_name" type="text"  required ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input  class="input" name="user_email" type="email" required ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text"  required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+                <img src="" alt="">
+        </section>
+    <section id="Projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="red">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assests/project1.jpg" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Billing Software System
+                                </h3>
+                                <br>
+                                <h4 class="project__description--sub-title">
+                                    Python Programming, Tkinter 
+                                </h4>
+                                <br>
+                                <p class="project__description--para">
+                                    The "Billing Software System" is a robust Python application designed for efficient retail management. 
+                                    It features a user-friendly interface using tkinter, enabling customers to input details and select items from various categories. 
+                                    The system calculates total prices including taxes for snacks, groceries, and hygiene products, ensuring accurate billing. 
+                                    It supports functions for generating and printing detailed bills, enhancing operational efficiency in supermarket environments.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Prasanth1467/billing-software-system" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i> 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="Projects">
+        <div class="container">
+            <div class="row">
+               
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assests/project2.jpg" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Static Website Project
+                                </h3>
+                                <br>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, Bootstrap 
+                                </h4>
+                                <br>
+                                <p class="project__description--para">
+                                    "Tourism Explorer is a visually engaging and user-friendly static website designed to inspire and assist travelers in planning their trips to some of the most iconic destinations in India. 
+                                     Utilizing the latest web technologies including HTML, CSS, and Bootstrap, the site features a seamless and responsive design that ensures an optimal viewing experience across all devices. 
+                                     With detailed sections showcasing destinations like the Taj Mahal and Golden Temple, users can explore stunning visuals and comprehensive information about each location. 
+                                     The intuitive navigation and interactive elements enhance the user experience, making it easy to find and access the information needed for trip planning."
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Prasanth1467/Static-Website-project" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i> 
+                                    </a>
+                                    <a href="https://tourismexplorer.ccbp.tech/" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="Projects">
+        <div class="container">
+            <div class="row">
+                
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assests/project3.jpg" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Responsive Website Project
+                                </h3>
+                                <br>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, Bootstrap, Flexbox 
+                                </h4>
+                                <br>
+                                <p class="project__description--para">
+                                    This project is a responsive website template for a food delivery service, showcasing a modern and user-friendly design. 
+                                    It utilizes HTML, Bootstrap 4, CSS, and some JavaScript for interactivity. 
+                                    The website features a navbar for easy navigation, a vibrant banner section with call-to-action buttons, 
+                                    and various sections including "Why Choose Us?", "Explore Menu", "Delivery & Payment", and "Follow Us". 
+                                    Each section is visually appealing with images and descriptive text, ensuring a seamless browsing experience across different devices. 
+                                    It incorporates Bootstrap's grid system for responsive layouts and includes custom styling for a cohesive brand identity.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Prasanth1467/Responsive-Website" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i> 
+                                    </a>
+                                    <a href="https://foodmuncherr.ccbp.tech/" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+            
+            <figure>
+                <img class="footer__logo--img" src="./assests/Personal logo.jpg" alt="">
+            </figure>
+            <div class="footer__social--list">
+                <a href="https://github.com/Prasanth1467" target="_blank" class="
+                   footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white
+                ">
+                Github
+            </a>
+            <a href="https://www.linkedin.com/in/prasanth-evr-a4ab131b7/" target="_blank" class="
+                   footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white
+                ">
+                Linkedin
+            </a>
+            <a href="#" onclick="toggleModal()" class="
+                   footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white
+                ">
+                Contact
+            </a>
+            <a href="./assests/Prasanth 2023.pdf" target="_blank" class="
+                   footer__social--link
+                   link__hover-effect
+                   link__hover-effect--white
+                ">
+                Resume
+            </a>
+            
+            
+        </div>
+            <div class="footer__copyright">Made by EVR Prasanth</div>
+        </div>
+    </div>
+    </footer>
+</body>
+
+</html>
